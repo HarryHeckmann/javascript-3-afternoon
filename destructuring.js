@@ -21,8 +21,7 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
-
+var {color, make, model, year} = carDetails
 
 
 ////////// PROBLEM 2 //////////
@@ -34,13 +33,12 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
-  
+  var {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
+greeting(harry = {title: 'Lord', firstName: 'Harry', lastName: 'Heckmann'})
 
 
 ////////// PROBLEM 3 //////////
@@ -53,8 +51,10 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
-
+function totalPopulation(obj){
+  var {utah, california, texas, arizona} = obj
+  return utah+california+texas+arizona
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -66,10 +66,11 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
 */
-
-//Code Here
-
-
+function ingredients(obj){
+  const {carb, fat, protein} = obj;
+  return [carb, fat, protein]
+}
+//console.log(array)
 
 ////////// PROBLEM 5 //////////
 
@@ -85,8 +86,22 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
-
+function largeNumbers({first, second, third}){
+  if (first < second){
+    if (first<third){
+      return first
+    }
+    else {
+      return third
+    }
+  }
+  else if(second<third){
+    return second
+  }
+  else {
+    return third
+  }
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -97,6 +112,20 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
-
+function numberGroups({a, b, c}){
+  if(a.length>b.length){
+    if(a.length>c.length){
+      return a
+    }
+    else{
+      return c
+    }
+  }
+  else if (b.length>c.length){
+    return b
+  }
+  else {
+    return c
+  }
+}
 
