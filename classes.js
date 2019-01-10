@@ -175,15 +175,15 @@ class Machine{
     this.needs_reboot = false;
   }
   makeWidgets(num){
-    this.widgets_made_count =+ num;
-    this.wear_and_tear_count += widgets_made_count/50;
+    this.widgets_made_count += num;
+    this.wear_and_tear_count += (num / 50);
   }
   fixMachine(){
-    this.reboot = true
+    this.needs_reboot = true
   }
   reboot(){
-    return function(){
-      this.wear_and_tear_count - 10;
+    return () => {
+      this.wear_and_tear_count -= 10;
       this.needs_reboot = false;
     }
   }
