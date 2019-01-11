@@ -60,7 +60,7 @@ function employeeUpdater(){
       employees[i].department = 'HR'
     }
   }
-  console.log(employees)
+  // console.log(employees)
   return employees
 }
 
@@ -93,7 +93,7 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 //Code Here
 function removeDuplicates(arr){
   for(let i=0;i<arr.length;i++){
-    console.log(arr)
+    // console.log(arr)
     for(let j=i+1;j<arr.length;j++){
       if(arr[i] === arr[j]){
         arr.splice(i, 1)
@@ -105,7 +105,7 @@ function removeDuplicates(arr){
 }
 removeDuplicates(workplaceAccidents)
 
-console.log(workplaceAccidents)
+// console.log(workplaceAccidents)
 
 
 ////////// PROBLEM 3 //////////
@@ -180,7 +180,7 @@ function recordCleaner(){
   }
 }
 recordCleaner()
-console.log(myCar)
+// console.log(myCar)
 
 
 ////////// PROBLEM 5 //////////
